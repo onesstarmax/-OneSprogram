@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background: #111827;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main > p {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+/* Language cards */
+.language-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.language-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.language-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.language-card .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.language-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.language-card p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button,
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .language-container {
+        grid-template-columns: 1fr;
+    }
+}
+.python-learning {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.python-learning h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.python-learning > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#pythonFilter {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.python-topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.python-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+}
+
+.python-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.python-card pre {
+    background: #111827;
+    color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+.python-card button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.python-card button:hover {
+    background: #1d4ed8;
+}
+.language-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.javascript-learning {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.javascript-learning h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#jsFilter {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.js-card {
+    margin-top: 20px;
+    padding: 18px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.js-note {
+    background: #eef2ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.js-card pre {
+    background: #111827;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.js-card button {
+    margin-top: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.c-learning {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.c-learning h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#cFilter {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.c-card {
+    margin-top: 20px;
+    padding: 18px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.c-note {
+    background: #eef2ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.c-card pre {
+    background: #111827;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.c-card button {
+    margin-top: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.c-topics {
+    margin-top: 20px;
+}
+
+.c-topics details {
+    margin-bottom: 12px;
+}
+
+.c-topics summary {
+    background: #2563eb;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.c-topics summary:hover {
+    background: #1d4ed8;
+}
+
+.c-topics summary::after {
+    content: " +";
+    float: right;
+}
+
+.c-topics details[open] summary::after {
+    content: " −";
+}
+
+.topic-content {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 0 0 10px 10px;
+}
+
+.topic-content p {
+    background: #eef2ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.topic-content pre {
+    background: #111827;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+/* C++ LEARNING */
+
+.cpp-learning {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.cpp-learning h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cpp-topics {
+    margin-top: 20px;
+}
+
+.cpp-topics details {
+    margin-bottom: 12px;
+}
+
+.cpp-topics summary {
+    background: #2563eb;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.cpp-topics summary:hover {
+    background: #1d4ed8;
+}
+
+.cpp-topics summary::after {
+    content: " +";
+    float: right;
+}
+
+.cpp-topics details[open] summary::after {
+    content: " −";
+}
+
+.cpp-topics .topic-content {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 0 0 10px 10px;
+}
+
+.cpp-topics .topic-content p {
+    background: #eef2ff;
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.cpp-topics pre {
+    background: #111827;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.cpp-topics code {
+    font-family: monospace;
+}
