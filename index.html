@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,30 +9,188 @@
     <title>OneSprogram - Programming Languages</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           LANGUAGE LESSON SECTIONS
+           ========================= */
+
+        .python-learning,
+        .javascript-learning,
+        .c-learning,
+        .cpp-learning {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .python-learning.active,
+        .javascript-learning.active,
+        .c-learning.active,
+        .cpp-learning.active {
+            display: block;
+        }
+
+        /* =========================
+           LANGUAGE CARDS
+           ========================= */
+
+        .language-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .language-card {
+            padding: 25px;
+            border-radius: 15px;
+            background: #f5f5f5;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-card .icon {
+            font-size: 45px;
+        }
+
+        .language-card h3 {
+            font-size: 25px;
+        }
+
+        .language-card p {
+            line-height: 1.6;
+        }
+
+        .btn {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #222;
+            color: white;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* =========================
+           LESSON CONTENT
+           ========================= */
+
+        .python-learning,
+        .javascript-learning,
+        .c-learning,
+        .cpp-learning {
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 1000px;
+        }
+
+        .python-card,
+        .js-card,
+        .c-card,
+        .cpp-card {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        .copy-button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .search-box {
+            width: 90%;
+            max-width: 600px;
+            padding: 13px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .back-button {
+            margin-bottom: 20px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        details {
+            background: #f5f5f5;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
+
     <nav>
+
         <h2>💻 OneSprogram</h2>
 
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#languages">Languages</a>
-            <a href="#about">About</a>
+
+            <a href="#languages">
+                Languages
+<a href="#comments">Comments</a>
+<a href="#ai-chat">🤖 AI Assistant</a>
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
         </div>
+
     </nav>
 
 
-    <!-- Hero Section -->
+    <!-- =========================
+         HOME
+         ========================= -->
+
     <section id="home" class="hero">
 
-        <h1>Learn Programming Languages 🚀</h1>
+        <h1>
+            Learn Programming Languages 🚀
+        </h1>
 
         <p>
-            Explore programming languages and start your journey
-            into software development.
+            Explore programming languages and start your
+            journey into software development.
         </p>
 
         <a href="#languages" class="main-button">
@@ -41,81 +200,349 @@
     </section>
 
 
-    <!-- Programming Languages -->
+    <!-- =========================
+         LANGUAGES
+         ========================= -->
+
     <section id="languages">
 
-
-        <h2>Programming Languages</h2>
+        <h2>
+            Programming Languages
+        </h2>
 
         <p class="section-description">
             Choose a language and start learning.
         </p>
 
 
-<div class="language-container">
+        <div class="language-container">
 
-    <!-- PYTHON CARD -->
-    <div class="language-card">
-        <div class="icon">🐍</div>
 
-        <h3>Python</h3>
+            <!-- =====================
+                 PYTHON CARD
+                 ===================== -->
+
+            <div class="language-card">
+
+                <div class="icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    A beginner-friendly language used for
+                    AI, automation, data science and
+                    web development.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="openLanguage('python-section')">
+
+                    Learn Python
+
+                </button>
+
+            </div>
+
+
+            <!-- =====================
+                 JAVASCRIPT CARD
+                 ===================== -->
+
+            <div class="language-card">
+
+                <div class="icon">
+                    🌐
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    A language used to make websites
+                    interactive and build modern
+                    web applications.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="openLanguage('javascript-section')">
+
+                    Learn JavaScript
+
+                </button>
+
+            </div>
+
+
+            <!-- =====================
+                 C CARD
+                 ===================== -->
+
+            <div class="language-card">
+
+                <div class="icon">
+                    🔵
+                </div>
+
+                <h3>
+                    C
+                </h3>
+
+                <p>
+                    A general-purpose programming language
+                    used for systems, operating systems
+                    and embedded systems.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="openLanguage('c-section')">
+
+                    Learn C
+
+                </button>
+
+            </div>
+
+
+            <!-- =====================
+                 C++ CARD
+                 ===================== -->
+
+            <div class="language-card">
+
+                <div class="icon">
+                    ➕
+                </div>
+
+                <h3>
+                    C++
+                </h3>
+
+                <p>
+                    A high-performance language used for
+                    systems, games, applications and
+                    software development.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="openLanguage('cpp-section')">
+
+                    Learn C++
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PYTHON
+         ================================================== -->
+
+    <section
+        id="python-section"
+        class="python-learning">
+
+        <button
+            class="back-button"
+            onclick="closeLanguages()">
+
+            ← Back to Languages
+
+        </button>
+
+        <h2>
+            🐍 Learn Python
+        </h2>
 
         <p>
-            A beginner-friendly language used for AI,
-            automation, data science and web development.
+            Learn Python step by step with simple examples.
         </p>
 
-        <a href="#python-section" class="btn">
-            Learn Python
-        </a>
-    </div>
-<!-- JAVASCRIPT -->
-<div class="language-column">
 
-    <!-- JavaScript Card -->
-    <div class="language-card">
-        <div class="icon">🌐</div>
-
-        <h3>JavaScript</h3>
-
-        <p>
-            A language used to make websites interactive
-            and build modern web applications.
-        </p>
-
-        <a href="#javascript-section" class="btn">
-            Learn JavaScript
-        </a>
-    </div>
+        <input
+            type="text"
+            id="pythonFilter"
+            class="search-box"
+            placeholder="🔎 Search Python topics..."
+            onkeyup="filterPython()"
+        >
 
 
-    <!-- JavaScript Learning Content -->
-    <section id="javascript-section" class="javascript-learning">
+        <!-- VARIABLES -->
 
-        <h2>🌐 Learn JavaScript</h2>
+        <div class="python-card">
+
+            <h3>
+                Variables
+            </h3>
+
+            <p>
+                Variables are used to store information
+                that a program can use later.
+            </p>
+
+            <pre><code>name = "John"
+age = 20
+
+print(name)
+print(age)</code></pre>
+
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
+                📋 Copy Code
+
+            </button>
+
+        </div>
+
+
+        <!-- IF STATEMENT -->
+
+        <div class="python-card">
+
+            <h3>
+                If Statements
+            </h3>
+
+            <p>
+                An if statement allows Python to make
+                decisions based on a condition.
+            </p>
+
+            <pre><code>age = 18
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are under 18")</code></pre>
+
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
+                📋 Copy Code
+
+            </button>
+
+        </div>
+
+
+        <!-- LOOP -->
+
+        <div class="python-card">
+
+            <h3>
+                Loops
+            </h3>
+
+            <p>
+                Loops allow you to repeat instructions.
+            </p>
+
+            <pre><code>for number in range(1, 6):
+    print(number)</code></pre>
+
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
+                📋 Copy Code
+
+            </button>
+
+        </div>
+
+
+        <!-- FUNCTION -->
+
+        <div class="python-card">
+
+            <h3>
+                Functions
+            </h3>
+
+            <p>
+                Functions are reusable blocks of code.
+            </p>
+
+            <pre><code>def greet(name):
+    print("Hello " + name)
+
+greet("John")</code></pre>
+
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
+                📋 Copy Code
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+         ================================================== -->
+
+    <section
+        id="javascript-section"
+        class="javascript-learning">
+
+        <button
+            class="back-button"
+            onclick="closeLanguages()">
+
+            ← Back to Languages
+
+        </button>
+
+        <h2>
+            🌐 Learn JavaScript
+        </h2>
 
         <p>
             Learn JavaScript with simple notes and examples.
         </p>
 
-        <!-- Filter -->
+
         <input
             type="text"
             id="jsFilter"
+            class="search-box"
             placeholder="🔎 Search JavaScript topics..."
             onkeyup="filterJavaScript()"
         >
 
 
-        <!-- Variables -->
+        <!-- VARIABLES -->
+
         <div class="js-card">
 
-            <h3>Variables</h3>
+            <h3>
+                Variables
+            </h3>
 
-            <p class="js-note">
-                📝 <strong>Note:</strong>
-                Variables are used to store information
-                that your program can use later.
+            <p>
+                Variables store information.
             </p>
 
             <pre><code>let name = "John";
@@ -124,22 +551,28 @@ let age = 20;
 console.log(name);
 console.log(age);</code></pre>
 
-            <button onclick="copyJSCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
 
-        <!-- If Statement -->
+        <!-- IF -->
+
         <div class="js-card">
 
-            <h3>If Statement</h3>
+            <h3>
+                If Statement
+            </h3>
 
-            <p class="js-note">
-                📝 <strong>Note:</strong>
-                An if statement allows JavaScript to make
-                decisions based on a condition.
+            <p>
+                An if statement allows JavaScript
+                to make decisions.
             </p>
 
             <pre><code>let age = 20;
@@ -150,20 +583,26 @@ if (age >= 18) {
     console.log("Under 18");
 }</code></pre>
 
-            <button onclick="copyJSCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
 
-        <!-- For Loop -->
+        <!-- LOOP -->
+
         <div class="js-card">
 
-            <h3>For Loop</h3>
+            <h3>
+                For Loop
+            </h3>
 
-            <p class="js-note">
-                📝 <strong>Note:</strong>
+            <p>
                 A loop repeats a block of code.
             </p>
 
@@ -171,22 +610,27 @@ if (age >= 18) {
     console.log(i);
 }</code></pre>
 
-            <button onclick="copyJSCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
 
-        <!-- Functions -->
+        <!-- FUNCTION -->
+
         <div class="js-card">
 
-            <h3>Functions</h3>
+            <h3>
+                Functions
+            </h3>
 
-            <p class="js-note">
-                📝 <strong>Note:</strong>
-                A function is a reusable block of code
-                that performs a particular task.
+            <p>
+                A function is a reusable block of code.
             </p>
 
             <pre><code>function greet(name) {
@@ -195,57 +639,64 @@ if (age >= 18) {
 
 greet("John");</code></pre>
 
-            <button onclick="copyJSCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
     </section>
 
-</div>
 
-<!-- C -->
-<div class="language-column">
 
-    <div class="language-card">
-<div class="icon">🔵</div>
-        <h3>C</h3>
-<section id="c-section" class="c-learning">
-        <p>
-            A general-purpose programming language used for
-            system programming, operating systems and embedded systems.
-        </p>
+    <!-- ==================================================
+         C
+         ================================================== -->
 
-        <a href="#c-section" class="btn">
-            Learn C
-        </a>
-    </div>
+    <section
+        id="c-section"
+        class="c-learning">
 
-    <!-- C learning content directly under the button -->
-    <section id="c-section" class="c-learning">
+        <button
+            class="back-button"
+            onclick="closeLanguages()">
 
-        <h2>🔵learn C</h2>
+            ← Back to Languages
+
+        </button>
+
+        <h2>
+            🔵 Learn C
+        </h2>
 
         <p>
-            Learn C programming with simple notes and examples.
+            Learn C programming with simple examples.
         </p>
 
-      <input
+
+        <input
             type="text"
             id="cFilter"
+            class="search-box"
             placeholder="🔎 Search C topics..."
             onkeyup="filterC()"
         >
 
-        <!-- Hello World -->
+
+        <!-- HELLO WORLD -->
+
         <div class="c-card">
 
-            <h3>Hello World</h3>
+            <h3>
+                Hello World
+            </h3>
 
-            <p class="c-note">
-                📝 <strong>Note:</strong>
-                C programs commonly use <code>printf()</code>
+            <p>
+                C programs commonly use printf()
                 to display output.
             </p>
 
@@ -254,22 +705,30 @@ greet("John");</code></pre>
 int main(void)
 {
     printf("Hello, World!\n");
+
     return 0;
 }</code></pre>
 
-            <button onclick="copyCCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
-        <!-- Variables -->
+
+        <!-- VARIABLES -->
+
         <div class="c-card">
 
-            <h3>Variables</h3>
+            <h3>
+                Variables
+            </h3>
 
-            <p class="c-note">
-                📝 <strong>Note:</strong>
+            <p>
                 Variables store values such as integers,
                 characters and decimal numbers.
             </p>
@@ -287,21 +746,28 @@ int main(void)
     return 0;
 }</code></pre>
 
-            <button onclick="copyCCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
-        <!-- If Statement -->
+
+        <!-- IF -->
+
         <div class="c-card">
 
-            <h3>If Statement</h3>
+            <h3>
+                If Statement
+            </h3>
 
-            <p class="c-note">
-                📝 <strong>Note:</strong>
+            <p>
                 The if statement allows a C program
-                to make decisions based on a condition.
+                to make decisions.
             </p>
 
             <pre><code>#include &lt;stdio.h&gt;
@@ -322,19 +788,26 @@ int main(void)
     return 0;
 }</code></pre>
 
-            <button onclick="copyCCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
-        <!-- For Loop -->
+
+        <!-- LOOP -->
+
         <div class="c-card">
 
-            <h3>For Loop</h3>
+            <h3>
+                For Loop
+            </h3>
 
-            <p class="c-note">
-                📝 <strong>Note:</strong>
+            <p>
                 A for loop repeats a block of code.
             </p>
 
@@ -350,20 +823,27 @@ int main(void)
     return 0;
 }</code></pre>
 
-            <button onclick="copyCCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
-        <!-- Functions -->
+
+        <!-- FUNCTIONS -->
+
         <div class="c-card">
 
-            <h3>Functions</h3>
+            <h3>
+                Functions
+            </h3>
 
-            <p class="c-note">
-                📝 <strong>Note:</strong>
-                Functions allow you to organize code into
+            <p>
+                Functions organize code into
                 reusable blocks.
             </p>
 
@@ -381,108 +861,86 @@ int main(void)
     return 0;
 }</code></pre>
 
-            <button onclick="copyCCode(this)">
+            <button
+                class="copy-button"
+                onclick="copyCode(this)">
+
                 📋 Copy Code
+
             </button>
 
         </div>
 
     </section>
 
-</div>
-
-<!-- C++ -->
-
-<div class="language-column">
-
-    <div class="language-card">
-
-        <div class="icon">➕</div>
-
-        <h3>C++</h3>
-
-        <p>
-            A high-level, general-purpose programming language
-            used for systems, games, applications and high-performance software.
-        </p>
-
-        <a href="#cpp-section" class="btn">
-            Learn C++
-        </a>
-
-    </div>
 
 
-    <section id="cpp-section" class="cpp-learning">
+    <!-- ==================================================
+         C++
+         ================================================== -->
 
-        <h2>➕ Learn C++</h2>
+    <section
+        id="cpp-section"
+        class="cpp-learning">
+
+        <button
+            class="back-button"
+            onclick="closeLanguages()">
+
+            ← Back to Languages
+
+        </button>
+
+        <h2>
+            ➕ Learn C++
+        </h2>
 
         <p>
-            Learn C++ with simple notes, explanations and examples.
+            Learn C++ with simple notes and examples.
         </p>
 
 
-        <!-- C++ TOPICS -->
+        <!-- INTRODUCTION -->
 
-        <div class="cpp-topics">
+        <details>
 
+            <summary>
+                Introduction to C++
+            </summary>
 
-            <details>
-                <summary>Introduction to C++</summary>
+            <div class="topic-content">
 
-                <div class="topic-content">
+                <p>
+                    C++ is a general-purpose programming
+                    language developed by Bjarne Stroustrup.
+                </p>
 
-                    <p>
-                        <strong>Note:</strong>
-                        C++ is a high-level, general-purpose programming
-                        language created by Danish computer scientist
-                        Bjarne Stroustrup.
-                    </p>
+                <p>
+                    It supports procedural,
+                    object-oriented and generic programming.
+                </p>
 
-                    <p>
-                        C++ was first released in 1985 as an extension
-                        of the C programming language.
-                    </p>
+            </div>
 
-                </div>
-
-            </details>
+        </details>
 
 
-            <details>
-                <summary>History of C++</summary>
+        <!-- HELLO WORLD -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        Development of C++ began in 1979 when
-                        Bjarne Stroustrup worked on a language called
-                        "C with Classes".
-                    </p>
+            <summary>
+                Hello World
+            </summary>
 
-                    <p>
-                        The name C++ refers to C's increment operator
-                        <code>++</code>.
-                    </p>
+            <div class="topic-content">
 
-                </div>
+                <p>
+                    C++ commonly uses iostream and
+                    std::cout to display output.
+                </p>
 
-            </details>
-
-
-            <details>
-                <summary>Hello World</summary>
-
-                <div class="topic-content">
-
-                    <p>
-                        <strong>Note:</strong>
-                        C++ commonly uses <code>iostream</code> and
-                        <code>std::cout</code> to display output.
-                    </p>
-
-                    <pre><code>#include &lt;iostream&gt;
+                <pre><code>#include &lt;iostream&gt;
 
 int main()
 {
@@ -491,23 +949,35 @@ int main()
     return 0;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Variables</summary>
+        <!-- VARIABLES -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        Variables store information that a program
-                        can use later.
-                    </p>
+            <summary>
+                Variables
+            </summary>
 
-                    <pre><code>#include &lt;iostream&gt;
+            <div class="topic-content">
+
+                <p>
+                    Variables store information that
+                    a program can use later.
+                </p>
+
+                <pre><code>#include &lt;iostream&gt;
 
 int main()
 {
@@ -520,46 +990,68 @@ int main()
     return 0;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Data Types</summary>
+        <!-- DATA TYPES -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        C++ supports different types of data,
-                        including integers, floating-point numbers,
-                        characters and Boolean values.
-                    </p>
+            <summary>
+                Data Types
+            </summary>
 
-                    <pre><code>int age = 20;
+            <div class="topic-content">
+
+                <p>
+                    C++ supports different types of data.
+                </p>
+
+                <pre><code>int age = 20;
 float height = 1.75f;
 double price = 99.99;
 char grade = 'A';
 bool student = true;</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>If Statement</summary>
+        <!-- IF -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        An if statement allows a C++ program to
-                        make decisions.
-                    </p>
+            <summary>
+                If Statement
+            </summary>
 
-                    <pre><code>#include &lt;iostream&gt;
+            <div class="topic-content">
+
+                <p>
+                    An if statement allows a program
+                    to make decisions.
+                </p>
+
+                <pre><code>#include &lt;iostream&gt;
 
 int main()
 {
@@ -577,22 +1069,35 @@ int main()
     return 0;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Loops</summary>
+        <!-- LOOPS -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        Loops allow a program to repeat instructions.
-                    </p>
+            <summary>
+                Loops
+            </summary>
 
-                    <pre><code>#include &lt;iostream&gt;
+            <div class="topic-content">
+
+                <p>
+                    Loops allow a program to repeat
+                    instructions.
+                </p>
+
+                <pre><code>#include &lt;iostream&gt;
 
 int main()
 {
@@ -604,23 +1109,35 @@ int main()
     return 0;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Functions</summary>
+        <!-- FUNCTIONS -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        Functions organize a program into reusable
-                        blocks of code.
-                    </p>
+            <summary>
+                Functions
+            </summary>
 
-                    <pre><code>#include &lt;iostream&gt;
+            <div class="topic-content">
+
+                <p>
+                    Functions organize programs into
+                    reusable blocks of code.
+                </p>
+
+                <pre><code>#include &lt;iostream&gt;
 
 void greet()
 {
@@ -634,24 +1151,36 @@ int main()
     return 0;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Classes and Objects</summary>
+        <!-- CLASSES -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        C++ supports object-oriented programming.
-                        Classes can be used to create objects that
-                        contain data and functions.
-                    </p>
+            <summary>
+                Classes and Objects
+            </summary>
 
-                    <pre><code>#include &lt;iostream&gt;
+            <div class="topic-content">
+
+                <p>
+                    Classes can be used to create objects
+                    containing data and functions.
+                </p>
+
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
 
 class Student
 {
@@ -670,25 +1199,38 @@ int main()
     return 0;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Inheritance</summary>
+        <!-- INHERITANCE -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        Inheritance allows one class to derive
-                        features from another class.
-                    </p>
+            <summary>
+                Inheritance
+            </summary>
 
-                    <pre><code>class Animal
+            <div class="topic-content">
+
+                <p>
+                    Inheritance allows one class to
+                    derive features from another class.
+                </p>
+
+                <pre><code>class Animal
 {
 public:
+
     void eat()
     {
         std::cout &lt;&lt; "Eating";
@@ -699,243 +1241,558 @@ class Dog : public Animal
 {
 };</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
+
+                </button>
+
+            </div>
+
+        </details>
 
 
-            <details>
-                <summary>Templates</summary>
+        <!-- TEMPLATES -->
 
-                <div class="topic-content">
+        <details>
 
-                    <p>
-                        <strong>Note:</strong>
-                        C++ supports generic programming through
-                        templates.
-                    </p>
+            <summary>
+                Templates
+            </summary>
 
-                    <pre><code>template &lt;typename T&gt;
+            <div class="topic-content">
+
+                <p>
+                    Templates allow C++ to support
+                    generic programming.
+                </p>
+
+                <pre><code>template &lt;typename T&gt;
 
 T add(T a, T b)
 {
     return a + b;
 }</code></pre>
 
-                </div>
+                <button
+                    class="copy-button"
+                    onclick="copyCode(this)">
 
-            </details>
+                    📋 Copy Code
 
+                </button>
+            </div>
 
-            <details>
-                <summary>Standard Library</summary>
+        </details>
+</section>
+<!-- C++ section ends here -->
 
-                <div class="topic-content">
+<section id="comments" class="comments-section">
+    <h2>💬 Comments</h2>
 
-                    <p>
-                        <strong>Note:</strong>
-                        The C++ Standard Library provides facilities
-                        such as containers, algorithms, strings,
-                        input/output and memory management.
-                    </p>
+    <p>Share your thoughts below.</p>
 
-                    <pre><code>#include &lt;vector&gt;
+    <div class="comment-form">
+        <input type="text" id="commentName" placeholder="Your name">
 
-std::vector&lt;int&gt; numbers = {
-    1, 2, 3, 4, 5
-};</code></pre>
+        <textarea id="commentText"
+                  placeholder="Write your comment..."
+                  rows="5"></textarea>
 
-                </div>
+        <button onclick="postComment()">💬 Post Comment</button>
+    </div>
 
-            </details>
+    <h3>Recent Comments</h3>
+    <div id="commentsList"></div>
+</section>
 
+<!-- About comes after Comments -->
 
-            <details>
-                <summary>C++ Standards</summary>
+    <!-- =========================
+         ABOUT
+         ========================= -->
 
-                <div class="topic-content">
+    <section id="about">
 
-                    <p>
-                        <strong>Note:</strong>
-                        C++ has been standardized through versions
-                        including C++98, C++03, C++11, C++14,
-                        C++17, C++20 and C++23.
-                    </p>
+        <h2>
+            About OneSprogram
+        </h2>
 
-                    <p>
-                        The material you provided identifies
-                        ISO/IEC 14882:2024 as the C++23 standard.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-        </div>
+        <p>
+            OneSprogram is a learning website designed
+            to help beginners understand programming
+            languages through simple explanations
+            and examples.
+        </p>
 
     </section>
 
-</div>
 
-<!-- IMPORTANT: PYTHON CONTENT IS OUTSIDE THE GRID -->
 
-<section id="python-section" class="python-learning">
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
-    <h2>🐍 Learn Python</h2>
-
-    <p>Learn Python step by step with simple examples.</p>
-
-    <input
-        type="text"
-        id="pythonFilter"
-        placeholder="🔎 Search Python topics..."
-        onkeyup="filterPython()"
-    >
-
-    <div class="python-topics">
-
-        <div class="python-card">
-            <h3>Variables</h3>
-
-            <p>Learn how to store information.</p>
-
-            <pre><code>name = "John"
-age = 20
-
-print(name)
-print(age)</code></pre>
-
-            <button onclick="copyCode(this)">
-                📋 Copy Code
-            </button>
-        </div>
-
-        <div class="python-card">
-            <h3>If Statements</h3>
-
-            <p>Learn how to make decisions.</p>
-
-            <pre><code>age = 18
-
-if age >= 18:
-    print("You are an adult")
-else:
-    print("You are under 18")</code></pre>
-
-            <button onclick="copyCode(this)">
-                📋 Copy Code
-            </button>
-        </div>
-
-        <div class="python-card">
-            <h3>Loops</h3>
-
-            <p>Repeat instructions using loops.</p>
-
-            <pre><code>for number in range(1, 6):
-    print(number)</code></pre>
-
-            <button onclick="copyCode(this)">
-                📋 Copy Code
-            </button>
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- Footer -->
     <footer>
 
-        <p>© 2026 OneSprogram | Learn. Code. Build. 🚀</p>
+        <p>
+            © 2026 OneSprogram |
+            Learn. Code. Build. 🚀
+        </p>
 
     </footer>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+         ================================================== -->
+
     <script>
 
-    function filterPython() {
-        ...
+        /* =========================
+           OPEN LANGUAGE
+           ========================= */
+
+        function openLanguage(sectionId) {
+
+            const sections = document.querySelectorAll(
+                ".python-learning, " +
+                ".javascript-learning, " +
+                ".c-learning, " +
+                ".cpp-learning"
+            );
+
+            sections.forEach(function(section) {
+
+                section.classList.remove("active");
+
+            });
+
+
+            const selectedSection =
+                document.getElementById(sectionId);
+
+
+            if (selectedSection) {
+
+                selectedSection.classList.add("active");
+
+                selectedSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
+
+
+
+        /* =========================
+           CLOSE LANGUAGE
+           ========================= */
+
+        function closeLanguages() {
+
+            const sections = document.querySelectorAll(
+                ".python-learning, " +
+                ".javascript-learning, " +
+                ".c-learning, " +
+                ".cpp-learning"
+            );
+
+            sections.forEach(function(section) {
+
+                section.classList.remove("active");
+
+            });
+
+
+            document.getElementById("languages")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+
+
+        /* =========================
+           PYTHON SEARCH
+           ========================= */
+
+        function filterPython() {
+
+            let input =
+                document.getElementById("pythonFilter");
+
+            let filter =
+                input.value.toLowerCase();
+
+            let cards =
+                document.querySelectorAll(".python-card");
+
+
+            cards.forEach(function(card) {
+
+                if (
+                    card.innerText
+                        .toLowerCase()
+                        .includes(filter)
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+
+        /* =========================
+           JAVASCRIPT SEARCH
+           ========================= */
+
+        function filterJavaScript() {
+
+            let input =
+                document.getElementById("jsFilter");
+
+            let filter =
+                input.value.toLowerCase();
+
+            let cards =
+                document.querySelectorAll(".js-card");
+
+
+            cards.forEach(function(card) {
+
+                if (
+                    card.innerText
+                        .toLowerCase()
+                        .includes(filter)
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+
+        /* =========================
+           C SEARCH
+           ========================= */
+
+        function filterC() {
+
+            let input =
+                document.getElementById("cFilter");
+
+            let filter =
+                input.value.toLowerCase();
+
+            let cards =
+                document.querySelectorAll(".c-card");
+
+
+            cards.forEach(function(card) {
+
+                if (
+                    card.innerText
+                        .toLowerCase()
+                        .includes(filter)
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+
+        /* =========================
+           COPY CODE
+           ========================= */
+
+        function copyCode(button) {
+
+            let container =
+                button.parentElement;
+
+            let code =
+                container.querySelector("code");
+
+
+            if (!code) {
+
+                return;
+
+            }
+
+
+            navigator.clipboard
+                .writeText(code.innerText)
+                .then(function() {
+
+                    button.innerText =
+                        "✅ Copied!";
+
+
+                    setTimeout(function() {
+
+                        button.innerText =
+                            "📋 Copy Code";
+
+                    }, 1500);
+
+                })
+                .catch(function() {
+
+                    button.innerText =
+                        "❌ Copy failed";
+
+                });
+
+        }
+/* =========================
+   COMMENTS SYSTEM
+   ========================= */
+
+let comments =
+    JSON.parse(localStorage.getItem("onesprogramComments")) || [];
+
+
+/* Display comments */
+
+function displayComments() {
+
+    const commentsList =
+        document.getElementById("commentsList");
+
+    commentsList.innerHTML = "";
+
+
+    comments.forEach(function(comment) {
+
+        const commentDiv =
+            document.createElement("div");
+
+        commentDiv.className = "comment";
+
+
+        commentDiv.innerHTML = `
+            <h4>👤 ${escapeHTML(comment.name)}</h4>
+
+            <p>
+                ${escapeHTML(comment.text)}
+            </p>
+
+            <div class="comment-date">
+                ${comment.date}
+            </div>
+        `;
+
+
+        commentsList.appendChild(commentDiv);
+
+    });
+
+}
+
+
+/* Post a comment */
+
+function postComment() {
+
+    const nameInput =
+        document.getElementById("commentName");
+
+    const textInput =
+        document.getElementById("commentText");
+
+
+    const name =
+        nameInput.value.trim();
+
+    const text =
+        textInput.value.trim();
+
+
+    if (name === "" || text === "") {
+
+        alert("Please enter your name and comment.");
+
+        return;
+
     }
 
-    function copyCode(button) {
-        ...
-    }
 
+    const newComment = {
+
+        name: name,
+
+        text: text,
+
+        date: new Date().toLocaleString()
+
+    };
+
+
+    comments.unshift(newComment);
+
+
+    localStorage.setItem(
+        "onesprogramComments",
+        JSON.stringify(comments)
+    );
+
+
+    nameInput.value = "";
+
+    textInput.value = "";
+
+
+    displayComments();
+
+}
+
+
+/* Prevent HTML from being inserted into comments */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+
+/* Load comments when page opens */
+
+displayComments();
     </script>
+<!-- AI CHATBOT -->
+<section id="ai-chat" class="ai-chat-section">
+    <h2>🤖 OneS AI Assistant</h2>
+    <p>Ask questions about programming and get help.</p>
+
+    <div id="chatBox" class="chat-box">
+        <div class="bot-message">
+            Hello! 👋 I'm OneS AI. Ask me a programming question.
+        </div>
+    </div>
+
+    <div class="chat-input-area">
+        <input
+            type="text"
+            id="userMessage"
+            placeholder="Ask a programming question..."
+            onkeydown="if(event.key === 'Enter') sendMessage()"
+        >
 <script>
+async function sendMessage() {
+    const input = document.getElementById("userMessage");
+    const chatBox = document.getElementById("chatBox");
 
-function filterJavaScript() {
+    const message = input.value.trim();
 
-    let input = document.getElementById("jsFilter");
-    let filter = input.value.toLowerCase();
+    if (!message) return;
 
-    let cards = document.querySelectorAll(".js-card");
+    chatBox.innerHTML += `
+        <div class="user-message">${message}</div>
+    `;
 
-    cards.forEach(function(card) {
+    input.value = "";
 
-        if (card.innerText.toLowerCase().includes(filter)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
+    const thinking = document.createElement("div");
+    thinking.className = "bot-message";
+    thinking.textContent = "Thinking... 🤖";
+    chatBox.appendChild(thinking);
 
-    });
+    try {
+        const response = await fetch("fetch("http://localhost:3000/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                message: message
+            })
+        });
+
+        const data = await response.json();
+
+        thinking.textContent = data.reply || "Sorry, I couldn't answer.";
+
+    } catch (error) {
+        thinking.textContent =
+            "Sorry, I couldn't connect to OneS AI.";
+        console.error(error);
+    }
+
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
-
-
-function copyJSCode(button) {
-
-    let code = button.parentElement
-        .querySelector("code")
-        .innerText;
-
-    navigator.clipboard.writeText(code);
-
-    button.innerText = "✅ Copied!";
-
-    setTimeout(function() {
-        button.innerText = "📋 Copy Code";
-    }, 1500);
-}
-
 </script>
+    </div>
+</section>
 <script>
-function filterC() {
+async function sendMessage() {
+    const input = document.getElementById("userMessage");
+    const chatBox = document.getElementById("chatBox");
 
-    let input = document.getElementById("cFilter");
-    let filter = input.value.toLowerCase();
-    let cards = document.querySelectorAll(".c-card");
+    const message = input.value.trim();
 
-    cards.forEach(function(card) {
+    if (!message) return;
 
-        if (card.innerText.toLowerCase().includes(filter)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
+    // Show user's message
+    chatBox.innerHTML += `
+        <div class="user-message">
+            ${message}
+        </div>
+    `;
 
-    });
-}
+    input.value = "";
 
+    // Temporary response
+    chatBox.innerHTML += `
+        <div class="bot-message">
+            Thinking... 🤖
+        </div>
+    `;
 
-function copyCCode(button) {
+    chatBox.scrollTop = chatBox.scrollHeight;
 
-    let code = button.parentElement
-        .querySelector("code")
-        .innerText;
-
-    navigator.clipboard.writeText(code);
-
-    button.innerText = "✅ Copied!";
-
-    setTimeout(function() {
-        button.innerText = "📋 Copy Code";
-    }, 1500);
-
+    // We will connect this to the AI backend next.
 }
 </script>
 </body>
-</html>
 
-</body>
 </html>
+```

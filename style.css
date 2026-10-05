@@ -444,3 +444,70 @@ footer {
 .cpp-topics code {
     font-family: monospace;
 }
+/* Hide all language lessons initially */
+.python-learning,
+.javascript-learning,
+.c-learning,
+.cpp-learning {
+    display: none;
+}
+
+/* Show selected language */
+.python-learning.active,
+.javascript-learning.active,
+.c-learning.active,
+.cpp-learning.active {
+    display: block;
+}
+/* =========================
+   COMMENTS
+   ========================= */
+
+.comments-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.comment-form textarea {
+    resize: vertical;
+}
+
+.comment {
+    background: #f5f5f5;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.comment h4 {
+    margin: 0 0 8px;
+}
+
+.comment p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.comment-date {
+    font-size: 13px;
+    color: #777;
+    margin-top: 10px;
+}
